@@ -1,0 +1,90 @@
+.form-container {
+  margin: 1rem 2rem;
+  padding: 0 0 3rem 0;
+}
+
+.form-header {
+  display: flex;
+}
+
+.form-star-title {
+  flex: 0 0 40%;
+}
+.star {
+  width: 3rem;
+  height: 3rem;
+  margin-left: -1rem;
+  cursor: pointer;
+}
+
+.star:first-child {
+  margin-left: 0;
+}
+
+.star-yellow {
+  fill: yellow;
+}
+
+.star-path {
+  display: inline;
+  color: yellow;
+  background-color: yellow;
+}
+
+.form-label {
+  margin-top: 1.5rem;
+  display: block;
+}
+
+.form-textarea {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  height: 10rem;
+  font-size: 2rem;
+}
+
+.form-remaining-char {
+  text-align: right;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.email-container {
+  display: flex;
+}
+
+.email-box {
+  margin-right: 2rem;
+  flex: 0 0 50%;
+}
+
+.form-email-label {
+  margin-top: 3rem;
+}
+
+.form-email {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  box-sizing: border-box;
+}
+
+.email-warning {
+  margin-left: 2rem;
+  font-size: 1.4rem;
+}
+
+.form-btn {
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  background-color: cornflowerblue;
+  border: none;
+  margin: 2rem 0;
+}
