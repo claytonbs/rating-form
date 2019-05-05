@@ -7,8 +7,7 @@ class Form extends Component {
   state = {
     stars: 0,
     text: "",
-    email: "",
-    textSize: 0
+    email: ""
   };
 
   onTextChange = e => {
@@ -27,6 +26,7 @@ class Form extends Component {
     }
     alert("Thank you for your feedback");
     console.log(this.state);
+    this.setState({ stars: 0, text: "", email: "" });
   };
 
   onClickStar = count => {
@@ -52,6 +52,7 @@ class Form extends Component {
                   classProp={this.state.stars > index ? "star-yellow" : null}
                   onClickStar={this.onClickStar}
                   count={star}
+                  key={star}
                 />
               ))}
             </div>
