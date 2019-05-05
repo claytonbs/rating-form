@@ -9,12 +9,18 @@
 
 .form-star-title {
   flex: 0 0 40%;
+  font-size: 2.1rem;
 }
 .star {
-  width: 3rem;
+  display: inline-block;
+  width: 3.6rem;
   height: 3rem;
-  margin-left: -1rem;
+  margin: 0 0.3rem 0 -1rem;
   cursor: pointer;
+  background-image: url("star-sprite.png");
+  background-size: 85%;
+  background-position-y: -3rem;
+  background-repeat: no-repeat;
 }
 
 .star:first-child {
@@ -22,7 +28,7 @@
 }
 
 .star-yellow {
-  fill: yellow;
+  background-position-y: 0;
 }
 
 .star-path {
@@ -32,16 +38,31 @@
 }
 
 .form-label {
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   display: block;
 }
 
+.form-email-label {
+  margin-top: 3rem;
+}
+
+.form-label,
+.form-email-label {
+  font-weight: 600;
+}
+
 .form-textarea {
+  border-radius: 0.3rem;
   margin-top: 1rem;
   display: block;
   width: 100%;
   height: 10rem;
   font-size: 2rem;
+  padding: 0.7rem;
+}
+
+.form-textarea::placeholder {
+  font-size: 1.3rem;
 }
 
 .form-remaining-char {
@@ -59,15 +80,12 @@
   flex: 0 0 50%;
 }
 
-.form-email-label {
-  margin-top: 3rem;
-}
-
 .form-email {
+  border: solid 1px #ccc;
+  border-radius: 0.3rem;
   display: block;
   width: 100%;
   height: 3rem;
-  box-sizing: border-box;
 }
 
 .email-warning {
@@ -76,7 +94,7 @@
 }
 
 .form-btn {
-  box-sizing: border-box;
+  border-radius: 0.3rem;
   font-size: 1.8rem;
   color: white;
   width: 100%;

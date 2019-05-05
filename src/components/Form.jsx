@@ -63,6 +63,7 @@ class Form extends Component {
           <textarea
             onChange={this.onTextChange}
             value={this.state.text}
+            placeholder="Schilden Sie ihre Erfahrungen und geben Sie Ihrer Bewewrtung eine persönliche Note."
             id="form-textarea"
             className="form-textarea"
             maxLength="400"
@@ -83,7 +84,13 @@ class Form extends Component {
                 className="form-email"
                 required
               />
+              <input
+                type="submit"
+                className="form-btn"
+                value="Jetzt bewerten"
+              />
             </div>
+
             <div className="email-warning">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
               neque temporibus. Provident doloribus, delectus molestias eaque
@@ -91,7 +98,6 @@ class Form extends Component {
               cupiditate accusantium necessitatibus. Est, nemo et?
             </div>
           </div>
-          <input type="submit" className="form-btn" value="Jetzt bewerten" />
         </form>
       </div>
     );
