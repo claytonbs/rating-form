@@ -38,37 +38,22 @@ class Form extends Component {
   };
 
   render() {
+    const maxLenght = 400;
+    const starNumber = [1, 2, 3, 4, 5];
+
     return (
       <div className="form-container">
         <form onSubmit={this.onFormSubimit}>
           <div className="form-header">
             <h3 className="form-star-title">Service</h3>
             <div className="star-box">
-              <Star
-                classProp={this.state.stars > 0 ? "star-yellow" : null}
-                onClickStar={this.onClickStar}
-                count="1"
-              />
-              <Star
-                classProp={this.state.stars > 1 ? "star-yellow" : null}
-                onClickStar={this.onClickStar}
-                count="2"
-              />
-              <Star
-                classProp={this.state.stars > 2 ? "star-yellow" : null}
-                onClickStar={this.onClickStar}
-                count="3"
-              />
-              <Star
-                classProp={this.state.stars > 3 ? "star-yellow" : null}
-                onClickStar={this.onClickStar}
-                count="4"
-              />
-              <Star
-                classProp={this.state.stars > 4 ? "star-yellow" : null}
-                onClickStar={this.onClickStar}
-                count="5"
-              />
+              {starNumber.map((star, index) => (
+                <Star
+                  classProp={this.state.stars > index ? "star-yellow" : null}
+                  onClickStar={this.onClickStar}
+                  count={star}
+                />
+              ))}
             </div>
           </div>
           <label htmlFor="form-textarea" className="form-label">
@@ -83,7 +68,7 @@ class Form extends Component {
             required
           />
           <p className="form-remaining-char">
-            Noch {400 - this.state.text.length} Zeichen möglich
+            Noch {maxLenght - this.state.text.length} Zeichen möglich
           </p>
           <label htmlFor="form-email" className="form-email-label">
             E-Mail Address
